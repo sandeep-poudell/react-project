@@ -1,3 +1,13 @@
+- Clone the project
+```
+git clone <github_url>
+```
+- Run the React server
+```
+npm run dev
+```
+***
+
 - Steps taken to create this project
 
 ```
@@ -9,16 +19,6 @@ npm create vite@latest
 
 cd react-project
 npm install
-```
-***
 
-- Clone the project
+npm install bootstrap
 ```
-git clone <github_url>
-```
-- Run the React server
-```
-npm run dev
-```
-
-
