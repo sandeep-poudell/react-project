@@ -7,10 +7,16 @@ function App() {
     return (
         <><ListGroup/>
             {/*{ items.length === 0 ? <p>No list found</p> : null }*/}
-            { items.length === 0 && <p>No list found</p> }
+            {items.length === 0 && <p>No list found</p>}
             <ul className="list-group">
-                {items.map((item) => (
-                    <li key={items.indexOf(item)}>{item}</li>
+                {items.map((item, index) => (
+                    <li
+                        className="list-group-item"
+                        key={index}
+                        onClick={() => console.log(item, index)}
+                    >
+                        {item}
+                    </li>
                 ))}
             </ul>
         </>
