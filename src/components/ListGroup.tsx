@@ -1,13 +1,17 @@
 import {useState} from "react";
 
-function ListGroup() {
-    let items = ["Tokyo", "Kyoto", "Hokkaido", "Osaka", "Fukuoka"]
-    // Managing State using useState Hook
+// use props to pass data to components
+interface ListGroupProps {
+    items: string[]
+    heading: string
+}
+
+function ListGroup({items, heading}: ListGroupProps) {
     const [selectedIndex, setSelectedIndex] = useState(-1)
 
     return (
         <>
-            <h1>List of cities</h1>
+            <h1>{heading}</h1>
             {/*{ items.length === 0 ? <p>No list found</p> : null }*/}
             {items.length === 0 && <p>No list found</p>}
             <ul className="list-group">
